@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+}
+.form__field {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.form__field label {
+  display: block;
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+  margin-bottom: 0.5rem;
+}
+.form__field input {
+  display: block;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  font-family: "Space Grotesk";
+}
+
+.card-container p {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+.active-success {
+  outline-color: hsl(249deg, 99%, 64%);
+}
+
+.active-error {
+  outline-color: hsl(0deg, 100%, 66%);
+}
+
+.error {
+  color: hsl(0deg, 100%, 66%);
+  display: none;
+}
+
+.card-container {
+  background-image: url("../../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  padding: 3rem 0rem;
+  margin-bottom: 90px;
+}
+.card-container .card-container__back {
+  width: 100%;
+  position: relative;
+}
+.card-container .card-container__back::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.card-container .card-container__back .card-backImg {
+  max-width: 375px;
+  width: 80%;
+  height: auto;
+  display: block;
+  position: relative;
+  float: right;
+}
+.card-container .card-container__back .card-backCVC {
+  position: absolute;
+  top: calc(50% - 14px);
+  right: calc(5% + 18px);
+  padding-right: 2px;
+}
+.card-container .card-container__front {
+  width: 100%;
+  position: absolute;
+  bottom: -60%;
+}
+.card-container .card-container__front .card-frontImg {
+  max-width: 375px;
+  width: 80%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+.card-container .card-container__front .card-frontLogo {
+  position: absolute;
+  top: 10%;
+  max-width: 70px;
+  padding: 0 0.5rem;
+}
+.card-container .card-container__front .card-frontNumber {
+  position: absolute;
+  top: 45%;
+  padding: 0 0.5rem;
+  width: 80%;
+  max-width: 375px;
+}
+.card-container .card-container__front .name-date {
+  width: 80%;
+  max-width: 375px;
+  position: absolute;
+  display: flex;
+  bottom: 10%;
+  padding: 0 0.5rem;
+}
+.card-container .card-container__front .name-date__name {
+  width: 60%;
+  text-transform: capitalize;
+}
+.card-container .card-container__front .name-date__date {
+  width: 40%;
+  text-align: right;
+}
+
+@media only screen and (min-width: 900px) {
+  .card-container {
+    background-image: url("../../images/bg-main-desktop.png");
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-container .card-container__back {
+    right: -40%;
+    bottom: -60px;
+  }
+  .card-container .card-container__back .card-backImg {
+    max-width: 550px;
+  }
+  .card-container .card-container__front {
+    bottom: 150px;
+    right: -40%;
+  }
+}
+.form {
+  margin-bottom: 3rem;
+}
+.form .date-cc {
+  display: flex;
+  gap: 1rem;
+}
+.form .date-cc .form__field:nth-child(1) {
+  display: grid;
+  grid-template-areas: "label label" "month year";
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.form .date-cc .form__field:nth-child(1) label {
+  grid-area: label;
+}
+.form .form__field__input {
+  border-radius: 5px;
+  font-size: 1.155rem;
+}
+.form:invalid {
+  outline-color: hsl(0deg, 100%, 66%);
+}
+.form .btn {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(278deg, 68%, 11%);
+  border: none;
+  border-radius: 5px;
+  font-family: "Space Grotesk";
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 900px) {
+  .form {
+    width: 70%;
+    margin: 25% auto;
+  }
+}/*# sourceMappingURL=style.css.map */

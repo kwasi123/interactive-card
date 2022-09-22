@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Space Grotesk';
+    font-weight: $fontWeight;
+}
+
+@media only screen and (min-width: $mobileBreakpoint) {
+    body {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+}
+
+.form__field {
+    width: 100%;
+    // border: 1px solid red;   
+    margin-bottom: 1.5rem;
+
+    label {
+        display: block;
+        text-transform: uppercase;
+        color: $colorDarkViolet;
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        display: block;
+        border: 1px solid $colorLightGray;
+        border-radius: 5px;
+        width: 100%;
+        padding: 1rem 0.5rem;
+        font-family: 'Space Grotesk';
+    }
+}
+
+.card-container {
+    p {
+        color: $colorWhite;
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media only screen and (min-width: $mobileBreakpoint) {
+    .container {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+.active-success {
+    outline-color: $inputSuccessColor;
+}
+
+.active-error {
+    outline-color: $inputErrorColor;
+}
+
+.error {
+    color: $inputErrorColor;
+    display: none;
+}

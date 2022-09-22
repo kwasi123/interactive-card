@@ -1,0 +1,50 @@
+.form {
+    margin-bottom: 3rem;
+
+    .date-cc {
+        display: flex;
+        gap: 1rem;
+
+        .form__field:nth-child(1) {
+            display: grid;
+            grid-template-areas: 'label label'
+                                    'month year';
+            column-gap: 1rem;
+
+            label {
+                grid-area: label;
+            }
+        }
+    }
+
+    #{&}__field__input {
+        border-radius: 5px;
+        font-size: 1.155rem;
+    }
+
+    &:invalid {
+        outline-color: $inputErrorColor;
+    }
+
+    .btn {
+        width: 100%;
+        display: inline-block;
+        padding: 1rem 0;
+        color: $colorWhite;
+        background-color: $colorDarkViolet;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Space Grotesk';
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: $mobileBreakpoint) {
+    .form {
+        // border: 2px solid red;
+        width: 70%;
+        margin: 25% auto;
+    }
+}

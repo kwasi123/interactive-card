@@ -1,0 +1,112 @@
+.card-container {
+    background-image: url('../../images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding: 3rem 0rem;
+    margin-bottom: max(90px);
+
+    #{&}__back {
+        width: 100%;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .card-backImg {
+            max-width: 375px;
+            width: 80%;
+            height: auto;
+            display: block;
+            position: relative;
+            float: right;
+        }
+
+        .card-backCVC {
+            position: absolute;
+            top: calc(50% - 14px);
+            right: calc(5% + 18px);
+            padding-right: 2px;
+        }
+
+    }
+
+    #{&}__front {
+        width: 100%;
+        position: absolute;
+        bottom: -60%;
+        
+        .card-frontImg {
+            max-width: 375px;
+            width: 80%;
+            height: auto;
+            display: block;
+            position: relative;
+        }
+
+        .card-frontLogo {
+            position: absolute;
+            top: 10%;
+            max-width: 70px;
+            padding: 0 0.5rem;
+        }
+
+        .card-frontNumber {
+            position: absolute;
+            top: 45%;
+            padding: 0 0.5rem;
+            width: calc(100% - 20%);
+            max-width: 375px;
+        }
+
+        .name-date {
+            width: calc(100% - 20%);
+            max-width: 375px;
+            position: absolute;
+            display: flex;
+            bottom: 10%;
+            padding: 0 0.5rem;
+
+            &__name {
+                width: 60%;
+                text-transform: capitalize;
+            }
+            &__date {
+                width: 40%;
+                text-align: right;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: $mobileBreakpoint) {
+    .card-container {
+        background-image: url('../../images/bg-main-desktop.png');
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #{&}__back {
+            // border: 2px solid red;
+            right: -40%;
+            bottom: -60px;
+
+            .card-backImg {
+                max-width: 550px;
+            }
+        }
+
+        #{&}__front {
+            // border: 3px solid green;
+            bottom: 150px;
+            right: -40%;
+
+        }
+    }
+}
